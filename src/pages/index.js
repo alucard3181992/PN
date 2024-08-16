@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import VariableEditor from "@/components/VariableEditor";
-import PreviewPanel from "@/components/PreviewPanel";
+import VariableEditor from "@/Components/VariableEditor";
+import PreviewPanel from "@/Components/PreviewPanel";
 import variables from "@/styles/variables.json";
 import VoterRegistration from "@/Components/Votantes/Principal";
 import { Button } from "primereact/button";
