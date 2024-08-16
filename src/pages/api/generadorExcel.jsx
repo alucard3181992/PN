@@ -6,6 +6,7 @@ export default async function handler(req, res) {
     case "GET": {
       try {
         // Cargar el archivo Excel
+        console.log("SOY EL PINCHE GET DE EXCEL");
         const workbook = await XlsxPopulate.fromFileAsync("./out.xlsx");
 
         // Seleccionar la hoja que contiene la tabla
