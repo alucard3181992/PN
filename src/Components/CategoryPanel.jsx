@@ -1,10 +1,6 @@
 import React from "react";
 
-export default function CategoryPanel({
-  categories,
-  onSelectCategory,
-  selectedCategory,
-}) {
+const CategoryPanel = ({ categories, onSelectCategory, selectedCategory }) => {
   return (
     <div
       style={{
@@ -37,4 +33,5 @@ export default function CategoryPanel({
       </ul>
     </div>
   );
-}
+};
+export default CategoryPanel;
