@@ -1,0 +1,113 @@
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: var(--surface-ground);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--surface-ground);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, .3);
+  background-color: var(--text-color);
+}
+
+.p-datatable-wrapper::-webkit-scrollbar {
+  height: 5px;
+}
+
+.seleccionado {
+  background: var(--highlight-bg) !important;
+  color: var(--primary-color);
+  text-decoration: underline;
+  border-radius: var(--border-radius);
+}
+
+.tol:hover {
+  background: var(--highlight-bg) !important;
+  color: var(--primary-color);
+  text-decoration: underline;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.tol {
+  display: flex;
+  margin: 0 !important;
+  padding: 10px 10px !important;
+  width: auto;
+  width: 100% !important;
+}
+
+.grid-sectionN {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 1.714rem;
+  gap: 1.714rem;
+  position: relative;
+  z-index: 0;
+}
+
+.grid-sectionN .cardN {
+  display: flex;
+  padding: 1rem 1rem 0.443rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.616rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #1e2226;
+  position: relative;
+  max-width: 411px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.grid-sectionN .cardN::after {
+  content: "";
+  background: linear-gradient(-145deg,
+      rgba(255, 255, 255, 0) 32.91%,
+      #fff 54.61%,
+      rgba(255, 255, 255, 0) 74.56%);
+  border-radius: 20px;
+  position: absolute;
+  top: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  left: -2px;
+  bottom: 1px;
+  right: -1px;
+  z-index: -1;
+  transition: all linear 1s;
+  background-position: 450.667px -90px;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+.grid-sectionN .cardN:hover::after {
+  background-position: -450.667px 80px;
+}
+
+.grid-sectionN .cardN.discussions {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  justify-content: center;
+}
+
+.grid-sectionN .cardN.discussions a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.centro-total {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
