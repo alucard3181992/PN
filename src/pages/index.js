@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import CategoryPanel from "../components/CategoryPanel";
-import VariableEditor from "../components/VariableEditor";
-import PreviewPanel from "../components/PreviewPanel";
-import variables from "../styles/variables.json";
+import CategoryPanel from "@/components/CategoryPanel";
+import VariableEditor from "@/components/VariableEditor";
+import PreviewPanel from "@/components/PreviewPanel";
+import variables from "@/styles/variables.json";
 import VoterRegistration from "@/Components/Votantes/Principal";
 import { Button } from "primereact/button";
 import VistaPrincipalExcel from "@/Components/excel/Inicio";
