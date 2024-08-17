@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import axios from "axios";
 import {
   descargarExcel,
   nuevosDatosExcel,
@@ -21,8 +21,10 @@ const VistaPrincipalExcel = () => {
     const fetchData = async () => {
       try {
         console.log("SI ME EJECUTO LLAMANDO AL GET");
-        const response = await fetch("/api/generadorExcel");
-        const result = await response.json();
+        const response = await axios.get("/api/generadorExcel");
+        //const response = await fetch("/api/generadorExcel");
+        console.log("RESPONSE", response);
+        const result = await response.data;
         setHeaders(result.headers); // Guarda los encabezados
         setData(result.data); // Guarda los datos
         console.log("DATOS OBTENIDOS", result.headers);
