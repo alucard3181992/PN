@@ -49,6 +49,7 @@ export default async function handler(req, res) {
         // Devolver los datos en la respuesta
         return res.status(200).json({ headers, data });
       } catch (error) {
+        console.log("EL ERROR ES", error);
         return res.status(500).json({ message: "ERROR: " + error.message });
       }
     }
@@ -98,7 +99,7 @@ export default async function handler(req, res) {
     case "PUT": {
       try {
         console.log("SOY PUT ", req.body);
-        const { codigo } = req.body
+        const { codigo } = req.body;
         // Load an existing workbook
         const workbook = await XlsxPopulate.fromFileAsync("./out.xlsx");
 
